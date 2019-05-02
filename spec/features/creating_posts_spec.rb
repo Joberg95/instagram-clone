@@ -14,9 +14,8 @@ feature 'Creating posts' do
   it 'needs an image to create a post' do
     visit '/'
     click_link 'New post'
-    attach_file('Image', "spec/files/images/coffee.jpg")
-    fill_in 'Caption', with: '#coffeetime'
+    fill_in 'Caption', with: "No picture"
     click_button 'Create Post'
-    expect(page).to have_content('Stop right there! You need an image to post here!')
+    expect(page).to have_content("Stop right there! You need an image to post here!")
   end
 end
