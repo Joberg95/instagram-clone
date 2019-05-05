@@ -4,8 +4,8 @@ feature 'Deleting a post' do
   background do
     post = create(:post, caption: 'random caption')
     visit '/'
-    find(:xpath, "//a[contains(@href,'posts/1')]").click
-    click_link 'Edit Post'
+    find(:xpath, ".//a[@href='/posts/#{post.id}']").click
+    click_link 'Edit post'
   end
   scenario 'Can delete a single post' do
     click_link 'Delete Post'
