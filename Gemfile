@@ -13,8 +13,9 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'capybara'
 gem 'haml'
-gem 'simple_form'
 gem "paperclip", "~> 6.0.0"
+gem 'simple_form'
+
 
 group :development, :test do
   gem 'factory_bot_rails'

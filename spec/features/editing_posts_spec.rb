@@ -9,8 +9,9 @@ feature 'Edit posts' do
     click_link 'Edit post'
   end
   scenario 'Can edit a post' do
-    fill_in "caption",	with: "someothertext"
-    click_button "Update post"
+    attach_file('Image', "spec/files/images/coffee.jpg")
+    fill_in "Caption",	with: "someothertext"
+    click_button "Update Post"
     expect(page).to have_content("Post Updated")
     expect(page).to have_content("someothertext")
   end
