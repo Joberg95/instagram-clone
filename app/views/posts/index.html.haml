@@ -1,7 +1,10 @@
-%h1 Photogram
--@post.each do |post|
-  =image_tag post.image.url(:medium)
-  =post.caption
-  =link_to (image_tag post.image.url(:medium)), post_path(post)
-
-= link_to "New post", new_post_path
+.posts-wrapper.row
+  -@post.each do |post|
+    .post
+      .post-head
+        .name
+          Anakin
+      .image.center-block
+        =link_to (image_tag post.image.url(:medium), class: 'img-responsive'), post_path(post)
+      %p.caption
+        =post.caption
