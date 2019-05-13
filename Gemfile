@@ -17,6 +17,7 @@ gem 'haml'
 gem "paperclip", "~> 6.0.0"
 gem 'simple_form'
 gem 'jquery-rails'
+gem 'devise'
 
 group :development, :test do
   gem 'factory_bot_rails'
