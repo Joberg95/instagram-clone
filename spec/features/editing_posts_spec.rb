@@ -6,7 +6,7 @@ feature 'Edit posts' do
     visit '/'
     
     find(:xpath, ".//a[@href='/posts/#{post.id}']").click
-    click_link 'Edit post'
+    click_link 'Edit Post'
   end
 
   scenario 'Can edit a post' do
